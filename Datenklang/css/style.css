@@ -20,3 +20,7 @@ body{
   margin: 5%;
   overflow-y: scroll;
 }
+
+p{
+  text-align: left;
+}
