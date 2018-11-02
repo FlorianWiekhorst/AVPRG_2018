@@ -1,0 +1,53 @@
+body{
+  background-color: white;
+  height: 100vh;
+  width: auto;
+  margin-block-start: 0;
+  margin-inline-start: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(10, 0fr);
+  grid-auto-rows: 10vw;
+}
+
+.square {
+  border: none;
+  width: 10vw;
+  height: 10vw;
+  padding: 0;
+}
+
+.c1{
+  background: #111111;
+}
+.c2{
+  background: #222222;
+}
+.c3{
+  background: #333333;
+}
+.c4{
+  background: #444444;
+}
+.c5{
+  background: #111111;
+}
+.c6{
+  background: #222222;
+}
+.c7{
+  background: #333333;
+}
+.c8{
+  background: #444444;
+}
+.c9{
+  background: #888888;
+}
+.c10{
+  background: #aaaaaa;
+}
