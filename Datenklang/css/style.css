@@ -10,12 +10,13 @@ body{
 
 .mainArea{
   background: #66ffb3;
-  float: middle;
+  text-align: center;
   margin: 5%;
 }
 
-embed-container{
+.embed-container{
   background: #00b359;
-  float: middle;
+  text-align: center;
   margin: 5%;
+  overflow-y: scroll;
 }
