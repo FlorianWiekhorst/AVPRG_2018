@@ -1,5 +1,5 @@
 body{
-  background-color: yellow;
+  background-color: #66ffb3;
   height: 100vh;
   width: auto;
   margin-block-start: 0;
@@ -9,13 +9,13 @@ body{
 }
 
 .mainArea{
-  background: #887722;
+  background: #66ffb3;
   float: middle;
   margin: 5%;
 }
 
 embed-container{
-  background: #677a24;
+  background: #00b359;
   float: middle;
   margin: 5%;
 }
