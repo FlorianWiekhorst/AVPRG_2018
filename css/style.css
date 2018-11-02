@@ -8,6 +8,14 @@ body{
   overflow: hidden;
 }
 
-.mainWindow{
-  background-color: #887722;
+.mainArea{
+  background: #887722;
+  float: middle;
+  margin: 5%;
+}
+
+embed-container{
+  background: #677a24;
+  float: middle;
+  margin: 5%;
 }
