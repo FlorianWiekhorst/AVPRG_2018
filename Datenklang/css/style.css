@@ -1,36 +1,70 @@
-body{
-  background-color: #2c8694;
-  margin-block-start: 0;
-  margin-inline-start: 0;
-  margin: 0;
-  border: 5px solid black;
-  overflow: scroll;
+body:before, body:after{
+  content: "";
+  position: fixed;
+  background: #212729;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+body:before{
+  top: 0;
+}
+body:after{
+  bottom: 0;
+}
+
+html, body{
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  overflow-y:scroll;
+  border-left: 10px solid #212729;
+  border-right: 10px solid #212729;
+  background: #007070;
 }
 
 #logo{
   width: 100%;
-  height: auto;
+  height: auto%;
+  position: relative;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .mainArea{
-  background: #2c8694;
+  background: #008080;
   text-align: center;
-  margin: 5%;
+  padding-top: 1px;
 }
 
 .embed-container{
-  background: #4ec8dc;
+  background: #007070;
   text-align: center;
-  margin: 4% 10%;
+  margin: 0% 10%;
   border: 2px solid black;
+  height: 40vh;
+  overflow-y: scroll;
+}
+
+.agreement{
+  padding-bottom: 7%;
+  padding-top: 2%;
+}
+
+.button{
+    font-size: 1rem;
 }
 
 h3{
-  padding-top: 20px;
+  padding-top: 0px;
 }
 
 p{
   text-align: left;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
