@@ -1,19 +1,5 @@
 $(document).ready(function() {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   //Mobile Footer visibility
   var x = window.matchMedia("(max-width: 700px)");
   if (x.matches){
