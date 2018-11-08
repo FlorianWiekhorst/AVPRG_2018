@@ -2,10 +2,14 @@
 Repository for AV-PRG
 
 
-See also:
+Good Stuff to read:
 
   https://devdocs.io/dom/web_audio_api/using_web_audio_api
   
   https://developer.mozilla.org/en-US/docs/Tools/Web_Audio_Editor
   
   https://devdocs.io/dom/web_audio_api/visualizations_with_web_audio_api
+
+
+Helpful github page "voice-change-o-mat" with visuals:
+ https://github.com/mdn/voice-change-o-matic-float-data
