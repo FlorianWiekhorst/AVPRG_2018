@@ -9,6 +9,8 @@ Good Stuff to read:
   https://developer.mozilla.org/en-US/docs/Tools/Web_Audio_Editor
   
   https://devdocs.io/dom/web_audio_api/visualizations_with_web_audio_api
+  
+  https://webaudioapi.com/book/Web_Audio_API_Boris_Smus.pdf
 
 _____________________
 
