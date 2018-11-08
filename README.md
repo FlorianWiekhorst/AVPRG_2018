@@ -13,13 +13,14 @@ Good Stuff to read:
 _____________________
 
 Helpful github page "voice-change-o-mat" with visuals:
- https://github.com/mdn/voice-change-o-matic-float-data
+https://github.com/mdn/voice-change-o-matic-float-data
 
-Test Live-Demo: https://mdn.github.io/voice-change-o-matic/
+Test Live-Demo:
+https://mdn.github.io/voice-change-o-matic/
 
 _____________________
 
 Working Sound Generator with Audio API:
-  http://ivanish.ca/diminished-fifth/
+http://ivanish.ca/diminished-fifth/
 
 _____________________
