@@ -22,6 +22,7 @@ html, body{
   border-left: 10px solid #212729;
   border-right: 10px solid #212729;
   background: #007070;
+  font-family: 'PT Sans', sans-serif;
 }
 
 #logo{
@@ -36,34 +37,68 @@ html, body{
 }
 
 .mainArea{
-  background: #008080;
+  background: #009080;
   text-align: center;
   padding-top: 1px;
 }
 
 .embed-container{
-  background: #007070;
-  text-align: center;
-  margin: 0% 10%;
+  display: grid;
+  grid: repeat(3, 33%) / auto-flow 40%;
+  background: #008080;
+  text-align: left;
+  margin: auto;
   border: 2px solid black;
   height: 40vh;
-  overflow-y: scroll;
+  width: 50%;
+  overflow-y:hidden;
 }
 
+.embed-container > div{
+  background-color: #008080;
+  width: 32%;
+  height: 32%;
+  padding-bottom: 2%;
+}
+
+
 .agreement{
-  padding-bottom: 5%;
+  padding-bottom: 7%;
   padding-top: 2%;
 }
 
-input[type="submit"]{
-    margin-top: 1rem;
+input[type="date"]{
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-left: 3rem;
+}
+
+input[type="text"]{
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-left: 3rem;
+}
+
+#genderCheck{
+  margin-left: 3rem;
+}
+
+h1, h2, h3 ,h4{
+  padding-top: 0px;
+  margin: 0.5rem 0;
 }
 
 h3{
-  padding-top: 0px;
+  margin-left: 3rem;
+  margin-top: 1.3rem;
+}
+
+h4{
+  font-size: 2rem;
 }
 
 p{
+  font-size: 2rem;
   text-align: left;
   margin-left: 2rem;
   margin-right: 2rem;
