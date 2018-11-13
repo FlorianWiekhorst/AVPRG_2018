@@ -1,48 +1,24 @@
 $(document).ready(function() {
-
-	//Color Picker Change Watcher
-	var colorWell;
-	var defaultColor = "#0000ff";
-
-	window.addEventListener("load", startup, false);
-	function startup() {
-		  colorWell = document.querySelector("#colorWell");
-		  colorWell.value = defaultColor;
-		  colorWell.addEventListener("change", updateAll, false);
-		  colorWell.select();
-	}
 	
-	}function updateAll(event) {
-		  var colorTitle = document.querySelector("colorTitle");
-		  document.querySelectorAll("colorTitle").forEach(function(p) {
-			h3.style.color = event.target.value;
-		  });
-	}
+	// Make Music button nur zeigen, wenn alle Felder ausgefüllt sind
+	$("input[type='text'], textarea").on("keyup", function(){
+		if($(this).val() != "" && $("textarea").val() != "" && $("input[name='genderCheck']").is(":checked") == true){
+			$("input[type='submit']").removeAttr("disabled");
+			document.getElementById('makemusicbutton').style.visibility = 'visible';
+		} else {
+			$("input[type='submit']").attr("disabled", "disabled");
+			document.getElementById('makemusicbutton').style.visibility = 'hidden';
+		}
+	});
 
-
-
-  //Mobile Footer visibility
-  /*
-  var x = window.matchMedia("(max-width: 700px)");
-  if (x.matches){
-    $(window).on("scroll",function(){
-      document.body.style.backgroundColor = "green";
-      if($(window).scrollTop() + $(window).height() == $(document).height()){
-        if($(".mobile-footer").height() == 72){
-          $(".mobile-footer").animate({
-            "height":"100px"
-          },100);
-        }
-      }else if($(window).scrollTop() + $(window).height() != $(document).height()){
-        if($(".mobile-footer").height() == 100){
-          $(".mobile-footer").animate({
-            "height":"72px"
-          },100);
-        }
-      }
-    });
-  };
-  else{
-    document.body.style.backgroundColor = "yellow";
-  }  */
+	// Auch Änderungen in den Feldern überwachen
+	$("input[name='genderCheck']").on("change", function(){
+		if($(this).val() != "" && $("textarea").val() != "" && $("input[name='genderCheck']").is(":checked") == true){
+			$("input[type='submit']").removeAttr("disabled");
+			document.getElementById('makemusicbutton').style.visibility = 'visible';
+		} else {
+			$("input[type='submit']").attr("disabled", "disabled");
+			document.getElementById('makemusicbutton').style.visibility = 'hidden';
+		}
+	});
 });

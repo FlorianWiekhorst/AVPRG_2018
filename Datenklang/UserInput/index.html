@@ -3,20 +3,22 @@
   <head>
     <meta charset="utf-8">
     <link media="all" type="text/css" rel="stylesheet" href="css/userinput.css"/>
+	<script src="jquery-3.3.1.min.js"></script>
     <title>Datenklang-UserInput</title>
   </head>
 
   <body>
-      <!-- Logo -->
-      <img id="logo" src="../logo2Dark.png"></img>
+    <img id="logo" src="../logo2Dark.png"></img>
 
     <div class="mainArea">
       <h1>Bitte gib deine Daten an:</h1>
       <h4>Nur durch die Angabe deiner Daten kann die KI<br>einen individuellen Sound für dich generieren!</h4>
+	  
         <div class="embed-container">
-          <!-- Userdaten aufnehmen -->
-
-            <div><h3>Geschlecht:</h3><form action="" id="genderCheck">
+		
+		<form action="" method="post" id="makemusicbutton">
+		
+            <div><h3>Geschlecht:</h3><form action="" id="genderCheck" name="genderCheck">
                   <input type="radio" name="gender" value="male"> Mann<br>
                   <input type="radio" name="gender" value="female"> Frau<br>
                   <input type="radio" name="gender" value="other"> ???
@@ -25,22 +27,23 @@
 
             <div><h3>Geburtsdatum:</h3><input type="date"></div>
 
-            <div><h3>Postleitszahl:</h3><input type="text" id="plz" pattern="\d{5}"></div>
+            <div><h3>Aktuelle PLZ:</h3><input type="text" id="plz" name="plz" pattern="\d{5}"></div>
 
-            <div><h3>Augenfarbe:</h3><form action="" id="eye_color">
+            <div><h3>Lieblingsfarbe:</h3><input type="color" value="#ff0000" id="colorWell"></div>
+
+            <div><h3>Geburtsort:</h3><input type="text" id="geburtsort" pattern="[a-zA-Z-_]{1,20}"></div>
+			
+			<div><h3>Augenfarbe:</h3>
+				<form action="" id="eye_color">
 				  <input type="radio" name="eyecolor" value="braun"> Braun<br>
                   <input type="radio" name="eyecolor" value="blau"> Blau<br>
                   <input type="radio" name="eyecolor" value="grün"> Grün<br>
 				  <input type="radio" name="eyecolor" value="grau"> Grau<br>
-                  <input type="radio" name="eyecolor" value="kombi"> Eine Farbkombination		
+                  <input type="radio" name="eyecolor" value="kombi"> Eine Farbkombination
+				</form>
 			</div>
-
-            <div><h3 id="colorTitle">Lieblingsfarbe:</h3><input type="color" value="#ff0000" id="colorWell">
-			
-				<p> TEST MY COLOR TEST 2019 </p>
-			</div>
-
-            <div><h3>FeldNummer_6:</h3> </div>
+			<input type="submit" value="SubmitWerte" class="button-primary" name="makemusicbutton" id="makemusicbutton" disabled="disabled" /> 
+		</form>
         </div>
     </div>
   </body>
