@@ -25,11 +25,20 @@
 
             <div><h3>Geburtsdatum:</h3><input type="date"></div>
 
-            <div><h3>Postleitszahl:</h3><input type="text"></div>
+            <div><h3>Postleitszahl:</h3><input type="text" id="plz" pattern="\d{5}"></div>
 
-            <div><h3>FeldNummer_4:</h3></div>
+            <div><h3>Augenfarbe:</h3><form action="" id="eye_color">
+				  <input type="radio" name="eyecolor" value="braun"> Braun<br>
+                  <input type="radio" name="eyecolor" value="blau"> Blau<br>
+                  <input type="radio" name="eyecolor" value="grün"> Grün<br>
+				  <input type="radio" name="eyecolor" value="grau"> Grau<br>
+                  <input type="radio" name="eyecolor" value="kombi"> Eine Farbkombination		
+			</div>
 
-            <div><h3>FeldNummer_5:</h3></div>
+            <div><h3 id="colorTitle">Lieblingsfarbe:</h3><input type="color" value="#ff0000" id="colorWell">
+			
+				<p> TEST MY COLOR TEST 2019 </p>
+			</div>
 
             <div><h3>FeldNummer_6:</h3> </div>
         </div>
