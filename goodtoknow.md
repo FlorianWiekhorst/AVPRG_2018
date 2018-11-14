@@ -5,3 +5,6 @@
  + https://github.com/tiborsaas/djent
  
  + https://news.ycombinator.com/item?id=12014663
+
+ + https://modernweb.com/creating-sound-with-the-web-audio-api-and-oscillators/
+ 
