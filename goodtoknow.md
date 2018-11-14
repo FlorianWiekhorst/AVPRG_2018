@@ -8,3 +8,5 @@
 
  + https://modernweb.com/creating-sound-with-the-web-audio-api-and-oscillators/
  
+ + https://codereview.stackexchange.com/questions/203209/random-tone-generator-using-web-audio-api
+ 
