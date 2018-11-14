@@ -2,3 +2,6 @@
 
  + https://codepen.io/DonKarlssonSan/post/fun-with-web-audio-api
  
+ + https://github.com/tiborsaas/djent
+ 
+ + https://news.ycombinator.com/item?id=12014663
