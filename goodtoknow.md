@@ -10,3 +10,6 @@
  
  + https://codereview.stackexchange.com/questions/203209/random-tone-generator-using-web-audio-api
  
+ + https://wiki.mozilla.org/Audio_Data_API#Complete_Example%3a_Creating_a_Web_Based_Tone_Generator
+ 
+ + https://stackoverflow.com/questions/6343450/generating-sound-on-the-fly-with-javascript-html5
