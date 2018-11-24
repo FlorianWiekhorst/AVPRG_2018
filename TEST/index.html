@@ -1,35 +1,14 @@
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-	     <script src="script.js"></script>
-       <script>
-       var targetDiv = document.getElementById('content');
-       var htmlContent = '';
+<!DOCTYPE html>
+<html>
+<body>
 
-           function populateData(event){
-             switch(event.target.value){
-               case 'A':{
-                htmlContent = 'Content for A';
-                 break;
-               }
-               case 'B':{
-                 htmlContent = "content for B";
-                 break;
-               }
-             }
-             targetDiv.innerHTML = htmlContent;
-           }
-       }
-       </script>
-      <title>JS Bin</title>
-    </head>
-    <body>
-      <input type="radio" name="radiobutton" value="A" onclick = "populateData(event)">
-      <input type="radio" name="radiobutton" value="B" onclick = "populateData(event)">
+<h1>My First JavaScript</h1>
 
-        <div id="content"></div>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
 
-    </body>
-    </html>
+<p id="demo"></p>
+
+</body>
+</html> 
