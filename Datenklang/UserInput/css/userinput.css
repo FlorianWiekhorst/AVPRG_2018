@@ -83,6 +83,10 @@ input::-webkit-color-swatch {
     border: none;
 }
 
+.jsValue, .jqValue {
+  color: red;
+}
+
 #genderCheck{
   margin-left: 3rem;
 }

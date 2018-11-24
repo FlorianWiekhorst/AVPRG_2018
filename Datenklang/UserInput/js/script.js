@@ -1,33 +1,45 @@
 $(document).ready(function() {
 	
 	
-	function validate(){
+	/* function validate(){
 	var error=document.getElementById("error");
 	var firstName = document.forms["logInForm"]["firstName"].value;
 	var lastName = document.forms["logInForm"]["lastName"].value;
+	var x = document.createElement("INPUT");
+		x.setAttribute("type", "text");
+		x.setAttribute("value", " "+lastName);
+		document.body.appendChild(x);
 		if (firstName == "" || firstName == null || lastName == "" || lastName == null){
 			error.innerHTML = "the info must be filled out";
 			error.style.color = "red";
 			return false;
 		}
 	}
+	 */
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	// Plain Javascript Example
+	var $jsName = document.querySelector('.name');
+	var $jsValue = document.querySelector('.jsValue');
+
+	$jsName.addEventListener('input', function(event){
+	  $jsValue.innerHTML = $jsName.value;
+	}, false);	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	
 	
 	
