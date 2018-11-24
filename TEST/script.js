@@ -1,6 +1,7 @@
+$(document).ready(function() {
     var targetDiv = document.getElementById('content');
         var htmlContent = '';
-        
+
         function populateData(event){
           switch(event.target.value){
             case 'A':{
@@ -14,4 +15,5 @@
           }
           targetDiv.innerHTML = htmlContent;
         }
-    
+
+});
