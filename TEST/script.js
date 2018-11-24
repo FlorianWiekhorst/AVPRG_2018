@@ -1,6 +1,17 @@
-var $jsName = document.querySelector('.name');
-var $jsValue = document.querySelector('.jsValue');
-
-$jsName.addEventListener('input', function(event){
-  $jsValue.innerHTML = $jsName.value;
-}, false);
+    var targetDiv = document.getElementById('content');
+        var htmlContent = '';
+        
+        function populateData(event){
+          switch(event.target.value){
+            case 'A':{
+             htmlContent = 'Content for A';
+              break;
+            }
+            case 'B':{
+              htmlContent = "content for B";
+    break;
+            }
+          }
+          targetDiv.innerHTML = htmlContent;
+        }
+    
