@@ -16,35 +16,103 @@
 	  
         <div class="embed-container">
 		
-		<form action="" method="post" id="makemusicbutton">
-		
-            <div><h3>Geschlecht:</h3><form action="" id="genderCheck" name="genderCheck">
-                  <input type="radio" name="gender" value="male"> Mann<br>
-                  <input type="radio" name="gender" value="female"> Frau<br>
-                  <input type="radio" name="gender" value="other"> ???
-                </form>
-            </div>
+		<form class="form-horizontal">
+		<fieldset>
 
-            <div><h3>Geburtsdatum:</h3><input type="date"></div>
-
-            <div><h3>Aktuelle PLZ:</h3><input type="text" id="plz" name="plz" pattern="\d{5}"></div>
-
-            <div><h3>Lieblingsfarbe:</h3><input type="color" value="#ff0000" id="colorWell"></div>
-
-            <div><h3>Geburtsort:</h3><input type="text" id="geburtsort" pattern="[a-zA-Z-_]{1,20}"></div>
+		<!-- Text input-->
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="vorname">Vorname</label>  
+		  <div class="col-md-4">
+		  <input id="vorname" name="vorname" type="text" placeholder="z.B.: Andreas" class="form-control input-md" required="">
 			
-			<div><h3>Augenfarbe:</h3>
-				<form action="" id="eye_color">
-				  <input type="radio" name="eyecolor" value="braun"> Braun<br>
-                  <input type="radio" name="eyecolor" value="blau"> Blau<br>
-                  <input type="radio" name="eyecolor" value="grün"> Grün<br>
-				  <input type="radio" name="eyecolor" value="grau"> Grau<br>
-                  <input type="radio" name="eyecolor" value="kombi"> Eine Farbkombination
-				</form>
-			</div>
-			<input type="submit" value="SubmitWerte" class="button-primary" name="makemusicbutton" id="makemusicbutton" disabled="disabled" /> 
-		</form>
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="geburtsort">Geburtsort</label>  
+		  <div class="col-md-4">
+		  <input id="geburtsort" name="geburtsort" type="text" placeholder="z.B.: Bremen" class="form-control input-md" required="">
+			
+		  </div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="plz">Aktuelle PLZ</label>  
+		  <div class="col-md-4">
+		  <input id="plz" name="plz" type="text" placeholder="z.B.: 23984" class="form-control input-md" required="">
+			
+		  </div>
+		</div>
+
+		<!-- Multiple Radios (inline) -->
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="radio-gender">Geschlecht</label>
+		  <div class="col-md-4"> 
+			<label class="radio-inline" for="radio-gender-0">
+			  <input type="radio" name="radio-gender" id="radio-gender-0" value="1" checked="checked">
+			  Mann
+			</label> 
+			<label class="radio-inline" for="radio-gender-1">
+			  <input type="radio" name="radio-gender" id="radio-gender-1" value="2">
+			  Frau
+			</label> 
+			<label class="radio-inline" for="radio-gender-2">
+			  <input type="radio" name="radio-gender" id="radio-gender-2" value="3">
+			  inter/divers
+			</label>
+		  </div>
+		</div>
+
+		<!-- Multiple Radios (inline) -->
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="radio-augenfarbe">Augenfarbe</label>
+		  <div class="col-md-4"> 
+			<label class="radio-inline" for="radio-augenfarbe-0">
+			  <input type="radio" name="radio-augenfarbe" id="radio-augenfarbe-0" value="br" checked="checked">
+			  Braun
+			</label> 
+			<label class="radio-inline" for="radio-augenfarbe-1">
+			  <input type="radio" name="radio-augenfarbe" id="radio-augenfarbe-1" value="bl">
+			  Blau
+			</label> 
+			<label class="radio-inline" for="radio-augenfarbe-2">
+			  <input type="radio" name="radio-augenfarbe" id="radio-augenfarbe-2" value="gr">
+			  Grün
+			</label> 
+			<label class="radio-inline" for="radio-augenfarbe-3">
+			  <input type="radio" name="radio-augenfarbe" id="radio-augenfarbe-3" value="ge">
+			  Gemischt
+			</label>
+		  </div>
+		</div>
+		
+		<!-- Color Auswahl -->
+		<div class="lieblingsfarbe">
+			<label class="col-md-4 control-label" for="lieblingsfarbe">Lieblingsfarbe</label>
+			<input type="color" value="#ff0000" id="colorWell">
+		</div>
+
+		<!-- Button -->
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="submit"></label>
+		  <div class="col-md-4">
+			<button id="submit" name="submit" class="btn btn-success">Abschicken!</button>
+		  </div>
+		</div>
+
+		</fieldset>
+			</form>
         </div>
     </div>
+	
+	<!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>

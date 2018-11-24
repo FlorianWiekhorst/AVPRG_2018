@@ -49,7 +49,7 @@ html, body{
   text-align: left;
   margin: auto;
   border: 2px solid black;
-  height: 40vh;
+  height: 50vh;
   width: 50%;
   overflow-y:hidden;
 }
@@ -61,6 +61,10 @@ html, body{
 .agreement{
   padding-bottom: 7%;
   padding-top: 2%;
+}
+
+.form-horizontal{
+	content float: middle;
 }
 
 input[type="date"]{
