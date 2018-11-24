@@ -4,6 +4,25 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width">
 	     <script src="script.js"></script>
+       <script>
+       var targetDiv = document.getElementById('content');
+       var htmlContent = '';
+
+           function populateData(event){
+             switch(event.target.value){
+               case 'A':{
+                htmlContent = 'Content for A';
+                 break;
+               }
+               case 'B':{
+                 htmlContent = "content for B";
+                 break;
+               }
+             }
+             targetDiv.innerHTML = htmlContent;
+           }
+       }
+       </script>
       <title>JS Bin</title>
     </head>
     <body>
@@ -11,24 +30,6 @@
       <input type="radio" name="radiobutton" value="B" onclick = "populateData(event)">
 
         <div id="content"></div>
-        <script>
-        var targetDiv = document.getElementById('content');
-        var htmlContent = '';
 
-            function populateData(event){
-              switch(event.target.value){
-                case 'A':{
-                 htmlContent = 'Content for A';
-                  break;
-                }
-                case 'B':{
-                  htmlContent = "content for B";
-                  break;
-                }
-              }
-              targetDiv.innerHTML = htmlContent;
-            }
-        }
-        </script>
     </body>
     </html>
