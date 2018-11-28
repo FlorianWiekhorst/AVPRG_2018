@@ -13,3 +13,5 @@
  + https://wiki.mozilla.org/Audio_Data_API#Complete_Example%3a_Creating_a_Web_Based_Tone_Generator
  
  + https://stackoverflow.com/questions/6343450/generating-sound-on-the-fly-with-javascript-html5
+
+ + https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
