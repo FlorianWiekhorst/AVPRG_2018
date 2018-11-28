@@ -15,3 +15,7 @@
  + https://stackoverflow.com/questions/6343450/generating-sound-on-the-fly-with-javascript-html5
 
  + https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
+
+ + https://developer.mozilla.org/en-US/docs/Tools/Web_Audio_Editor
+ 
+ 
