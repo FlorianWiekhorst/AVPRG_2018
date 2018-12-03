@@ -6,17 +6,15 @@
   		<meta name="description" content="Datenklang AVPRG 2018" />
   		<meta name="author" content="Flony" />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  		<link rel="stylesheet" type="text/css" href="css/datenklang.css" />
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="css/index.css" />
     </head>
     <body>
-      <img id="logo" src="img/logo_gif.gif"></img>
+      <img id="logo" src="img/logo_alpha.png"></img>
 
     <?php
-    // Leere Variablen anlegen:
     $name = $geburtsort = $geschlecht = $augenfarbe = $geburtsjahr = $geburtsmonat = $geburtstag = "";
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $name = user_input($_POST["name"]);
       $geburtsort = user_input($_POST["geburtsort"]);
@@ -94,12 +92,12 @@
                   <span class="custom-control-description">Grau</span>
                 </label>
                 <label class="custom-control custom-radio">
-                  <input name="augenfarbe" type="radio" required="required" class="custom-control-input" value="4">
+                  <input name="augenfarbe" type="radio" class="custom-control-input" value="4" required="required">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">Braun</span>
                 </label>
                 <label class="custom-control custom-radio">
-                  <input name="augenfarbe" type="radio" required="required" class="custom-control-input" value="5">
+                  <input name="augenfarbe" type="radio" class="custom-control-input" value="5" required="required">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">Gemischt</span>
                 </label>
@@ -110,13 +108,11 @@
               <label for="geburtsjahr_select">Geburtsjahr</label>
               <div>
                 <select id="geburtsjahr_select" name="geburtsjahr" class="custom-select" required="required">
-                  <option value="20">1920</option>
-                  <option value="21">1921</option>
-                  <option value="22">1922</option>
-                  <option value="23">1923</option>
-                  <option value="24">1924</option>
-                  <option value="25">1925</option>
-                  <option value="26">1926</option>
+                  <?php
+                      for ($i=1; $i<=100; $i++){
+                          ?> <option value="<?php echo (2018-$i);?>"><?php echo (2018-$i);?></option> <?php
+                      }
+                  ?>
                 </select>
               </div>
             </div>
@@ -143,44 +139,17 @@
               <label for="geburtstag_select">Geburtstag</label>
               <div>
                 <select id="geburtstag_select" name="geburtstag" class="custom-select" required="required">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
-                  <option value="21">21</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="24">24</option>
-                  <option value="25">25</option>
-                  <option value="26">26</option>
-                  <option value="27">27</option>
-                  <option value="28">28</option>
-                  <option value="29">29</option>
-                  <option value="30">30</option>
-                  <option value="31">31</option>
+                  <?php
+                      for ($i=1; $i<=31; $i++){
+                          ?> <option value="<?php echo $i;?>"><?php echo $i;?></option> <?php
+                      }
+                  ?>
                 </select>
               </div>
             </div>
           </div>
-
             <div class="form-group">
-              <button name="submit" type="submit" class="myButton" id="myButton">Daten abschicken</button>
+              <button name="submit" type="submit" class="sub_button" id="sub_button">Daten abschicken</button>
             </div>
           </form>
         </div>

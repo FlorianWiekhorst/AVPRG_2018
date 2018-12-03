@@ -5,8 +5,11 @@
       <title>Datenklang</title>
   		<meta name="description" content="Datenklang AVPRG 2018" />
   		<meta name="author" content="Flony" />
-  		<link rel="stylesheet" type="text/css" href="css/master.css" />
-      <script src="js/script.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  		<link rel="stylesheet" type="text/css" href="css/data.css" />
+      <script src="js/musik.js"></script>
     </head>
     <body>
     <!-- Anlegen des UserInputs aus dem Formular der vorherigen Seite -->
@@ -31,22 +34,52 @@
         var javaGeburtstag = "<?php echo $javaGeburtstag ?>";
       </script>
 
-
-      <img id="logo" src="img/logo.png"></img>
+      <img id="logo" src="img/logo_alpha.png"></img>
 
       <div class="mainArea">
-          <div class="embed-container_1">
-            <button id="spielmeinsound">Starte mein Sound</button>
-            <script src="js/script.js"></script>
+          <div class="visualisierungsBox">
+           <!-- visualisierungsCode hier -->
+           <!-- visualisierungsCode hier -->
+           <!-- visualisierungsCode hier -->
           </div>
-          <div class="embed-container_2">
-            <div id="anwortstext">
-              Willkommen <?php echo $_POST["name"];  ?>,<br>
-              aus der schönen Stadt <?php echo $_POST["geburtsort"]; ?>.<br>
-              Geboren am <?php echo $_POST["geburtstag"]; echo $_POST["geburtsmonat"]; echo $_POST["geburtsjahr"]; ?>.<br>              
 
+          <div class="bedienelemente">
+                <button id="spielmeinsound" onclick="VolumeSample.toggle();" value="Play/Pause"></button>
+                <input type="range" min="0" max="100" value="100" id="schieberegler" oninput="VolumeSample.changeVolume(this);">
+          </div>
+
+          <div class="zusatzfragen">
+            <div id="anwortstext">
+              Individualisiere deinen Song jetzt live noch weiter, <?php echo $_POST["name"];?>,<br>
+              indem du ein paar Fragen beantwortest.
+            </div>
+            <form action="" method="post" class="radio_zusatzfragen">
+              <label>Meinen Urlaub verbringe ich am Liebsten:</label> <!-- hier die vers. Fragen per echo einbinden! -->
+              <div>
+                <label class="custom-control custom-radio">
+                  <input name="zusatzfragen_1" type="radio" class="custom-control-input" value="a" required="required">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Ruhig am Pool.</span>
+                </label>
+                <label class="custom-control custom-radio">
+                  <input name="zusatzfragen_1" type="radio" class="custom-control-input" value="b" required="required">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">auf der Couch vorm TV.</span>
+                </label>
+                <label class="custom-control custom-radio">
+                  <input name="zusatzfragen_1" type="radio" class="custom-control-input" value="c" required="required">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Halbnackt im Wald.</span>
+                </label>
+                <label class="custom-control custom-radio">
+                  <input name="zusatzfragen_1" type="radio" class="custom-control-input" value="d" required="required">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Urlaub?</span>
+                </label>
               </div>
+            </form>
           </div>
       </div>
+      <script src="js/musik.js"></script>
     </body>
 </html>
