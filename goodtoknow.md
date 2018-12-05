@@ -18,4 +18,13 @@
 
  + https://developer.mozilla.org/en-US/docs/Tools/Web_Audio_Editor
  
+_______________________________________
+Wegen der gestrichelten Lininen wenn man den Lautstärkeregler oder den play-button nutzt:
  
+  in CSS die ID tagen mit :focus - dann outline: none;
+  
+  ->    #meine_id:focus{
+        outline: none;
+        }
+_______________________________________
+        
