@@ -9,7 +9,6 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   		<link rel="stylesheet" type="text/css" href="css/data.css" />
-      <script src="js/musik.js"></script>
     </head>
     <body>
     <!-- Anlegen des UserInputs aus dem Formular der vorherigen Seite -->
@@ -38,14 +37,14 @@
 
       <div class="mainArea">
           <div class="visualisierungsBox">
-           <!-- visualisierungsCode hier -->
-           <!-- visualisierungsCode hier -->
-           <!-- visualisierungsCode hier -->
+               <!-- visualisierungsCode hier -->
+               <!-- visualisierungsCode hier -->
+               <!-- visualisierungsCode hier -->
           </div>
 
           <div class="bedienelemente">
-                <button id="spielmeinsound" onclick="VolumeSample.toggle();" value="Play/Pause"></button>
-                <input type="range" min="0" max="100" value="100" id="schieberegler" oninput="VolumeSample.changeVolume(this);">
+                <button id="spielmeinsound"></button>
+                <input type="range" min="0" max="100" value="100" id="schieberegler">
           </div>
 
           <div class="zusatzfragen">
@@ -80,6 +79,8 @@
             </form>
           </div>
       </div>
+      <script src="js/keyboardTest.js"></script>
       <script src="js/musik.js"></script>
+      <script type="text/javascript" src="jquery-3.3.1.js"></script>
     </body>
 </html>

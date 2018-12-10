@@ -38,23 +38,17 @@
             <div class="form-group">
               <label></label>
               <div class="input-group">
-                <div class="input-group-addon">
-                  <i class="fa fa-chevron-right"></i>
-                </div>
-                <input id="vorname_text" name="name" placeholder="Vorname" type="text" class="form-control here" required="required">
+                <input id="vorname_text" name="name" value="Peter" placeholder="Vorname" type="text" class="form-control here" required="required">
               </div>
             </div>
             <div class="form-group">
               <label></label>
               <div class="input-group">
-                <div class="input-group-addon">
-                  <i class="fa fa-chevron-right"></i>
-                </div>
-                <input id="geburtsort_text" name="geburtsort" placeholder="Geburtsort" type="text" class="form-control here" required="required">
+                <input id="geburtsort_text" name="geburtsort" value="berlin" placeholder="Geburtsort" type="text" class="form-control here" required="required">
               </div>
             </div>
             <div class="form-group">
-              <label>Ich bin ...</label>
+              <label>Ich sehe mich als...</label>
               <div>
                 <label class="custom-control custom-radio">
                   <input name="geschlecht" type="radio" class="custom-control-input" value="12" required="required">
@@ -74,7 +68,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Meine Augenfarbe ist ...</label>
+              <label>Meine Augenfarbe ist...</label>
               <div>
                 <label class="custom-control custom-radio">
                   <input name="augenfarbe" type="radio" class="custom-control-input" value="1" required="required">
@@ -145,6 +139,17 @@
                       }
                   ?>
                 </select>
+                  <?php
+                    if(checkdate($geburtsmonat, $geburtstag, $geburtsjahr)){
+                        ?>
+                        <script type='text/javascript'>
+                          $(document).ready(function(){
+                            document.getElementById("sub_button").style.display = "inline-block";
+                          });
+                          </script>
+                          <?php
+                          }
+                    ?>
               </div>
             </div>
           </div>

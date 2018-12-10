@@ -82,16 +82,14 @@ body{
 .radio_zusatzfragen{
   margin-top: 20px;
 }
+.custom_control{
+  margin: 10px 120px;
+}
 
 .embed-container > div{
   background-color: #0c5460;
   margin: 20px;
   width: 400px;
-}
-
-.agreement{
-  padding-bottom: 7%;
-  padding-top: 2%;
 }
 
 .form-horizontal{
