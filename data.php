@@ -44,7 +44,7 @@
 
           <div class="bedienelemente">
                 <button id="spielmeinsound"></button>
-                <input type="range" min="0" max="100" value="100" id="schieberegler">
+                <input type="range" min="0" max="100" value="10" class="slider" id="gainSlider">
           </div>
 
           <div class="zusatzfragen">
