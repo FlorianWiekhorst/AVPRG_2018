@@ -21,9 +21,9 @@ class Sound {
   }
 }
 
-function getMelodie() {
+function getMelody() {
               // c      d      e      f     g    a     h     c"     d"     f"    null
-  var noten = [261.6, 293.7, 329.6, 349.2, 392, 440, 493.9, 523.3, 587.3, 659.3, 0];
+  var notes = [261.6, 293.7, 329.6, 349.2, 392, 440, 493.9, 523.3, 587.3, 659.3, 0];
   var allFrequencies = [ // 0 - 124 -> und "c" entspricht [61]
       8.1757989156,       8.6619572180,       9.1770239974,
       9.7227182413,       10.3008611535,      10.9133822323,
@@ -85,33 +85,33 @@ function getMelodie() {
     note.play(allFrequencies[javaGeburtstag*3)+1], now + 7);
   }
   else if (javaGeburtsmonat > 9) {
-    note.play(noten[0], now + 1);
-    note.play(noten[0], now + 1.5);
-    note.play(noten[0], now + 2);
-    note.play(noten[0], now + 2.5);
-    note.play(noten[0], now + 3);
-    note.play(noten[0], now + 3.5);
-    note.play(noten[3], now + 4);
-    note.play(noten[3], now + 4.5);
-    note.play(noten[3], now + 5);
-    note.play(noten[3], now + 5.5);
-    note.play(noten[0], now + 6);
-    note.play(noten[3], now + 6.5);
-    note.play(noten[3], now + 7);
-    note.play(noten[3], now + 7.5);
-    note.play(noten[3], now + 8);
-    note.play(noten[0], now + 8.5);
-    note.play(noten[1], now + 9);
-    note.play(noten[1], now + 9.5);
-    note.play(noten[1], now + 10);
-    note.play(noten[1], now + 10.5);
-    note.play(noten[2], now + 11);
-    note.play(noten[2], now + 11.5);
-    note.play(noten[1], now + 12);
-    note.play(noten[1], now + 12.5);
-    note.play(noten[1], now + 13);
-    note.play(noten[1], now + 13.5);
-    note.play(noten[0], now + 14);
+    note.play(notes[0], now + 1);
+    note.play(notes[0], now + 1.5);
+    note.play(notes[0], now + 2);
+    note.play(notes[0], now + 2.5);
+    note.play(notes[0], now + 3);
+    note.play(notes[0], now + 3.5);
+    note.play(notes[3], now + 4);
+    note.play(notes[3], now + 4.5);
+    note.play(notes[3], now + 5);
+    note.play(notes[3], now + 5.5);
+    note.play(notes[0], now + 6);
+    note.play(notes[3], now + 6.5);
+    note.play(notes[3], now + 7);
+    note.play(notes[3], now + 7.5);
+    note.play(notes[3], now + 8);
+    note.play(notes[0], now + 8.5);
+    note.play(notes[1], now + 9);
+    note.play(notes[1], now + 9.5);
+    note.play(notes[1], now + 10);
+    note.play(notes[1], now + 10.5);
+    note.play(notes[2], now + 11);
+    note.play(notes[2], now + 11.5);
+    note.play(notes[1], now + 12);
+    note.play(notes[1], now + 12.5);
+    note.play(notes[1], now + 13);
+    note.play(notes[1], now + 13.5);
+    note.play(notes[0], now + 14);
   }
 
 document.getElementById("gainSlider").addEventListener("input", function (e) {
@@ -121,5 +121,5 @@ document.getElementById("gainSlider").addEventListener("input", function (e) {
 }
 
 document.getElementById("spielmeinsound").addEventListener("click", function (e) {
-    getMelodie();
+    getMelody();
 });

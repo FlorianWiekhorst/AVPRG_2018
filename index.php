@@ -14,15 +14,15 @@
       <img id="logo" src="img/logo_alpha.png"></img>
 
     <?php
-    $name = $geburtsort = $geschlecht = $augenfarbe = $geburtsjahr = $geburtsmonat = $geburtstag = "";
+    $name = $birthPlace = $gender = $eyeColor = $birthYear = $birthMonth = $birthDay = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $name = user_input($_POST["name"]);
-      $geburtsort = user_input($_POST["geburtsort"]);
-      $augenfarbe = user_input($_POST["augenfarbe"]);
-      $geschlecht = user_input($_POST["geschlecht"]);
-      $geburtsjahr = user_input($_POST["geburtsjahr"]);
-      $geburtsmonat = user_input($_POST["geburtsmonat"]);
-      $geburtstag = user_input($_POST["geburtstag"]);
+      $birthPlace = user_input($_POST["geburtsort"]);
+      $eyeColor = user_input($_POST["augenfarbe"]);
+      $gender = user_input($_POST["geschlecht"]);
+      $birthYear = user_input($_POST["geburtsjahr"]);
+      $birthMonth = user_input($_POST["geburtsmonat"]);
+      $birthDay = user_input($_POST["geburtstag"]);
     }
     function user_input($data) {
       $data = trim($data);

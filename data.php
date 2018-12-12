@@ -14,23 +14,23 @@
     <!-- Anlegen des UserInputs aus dem Formular der vorherigen Seite -->
       <?php
          $javaName = $_POST["name"];
-         $javaAugenfarbe = $_POST["augenfarbe"];
-         $javaGeburtsmonat = $_POST["geburtsmonat"];
-         $javaGeburtsort = $_POST["geburtsort"];
-         $javaGeschlecht = $_POST["geschlecht"];
-         $javaGeburtsjahr = $_POST["geburtsjahr"];
-         $javaGeburtstag = $_POST["geburtstag"];
+         $javaEyeColor = $_POST["augenfarbe"];
+         $javaBirthMonth = $_POST["geburtsmonat"];
+         $javaBirthPlace = $_POST["geburtsort"];
+         $javaGender = $_POST["geschlecht"];
+         $javaBirthYear = $_POST["geburtsjahr"];
+         $javaBirthDay = $_POST["geburtstag"];
 
       ?>
       <!-- UserInput an die JavaScript-Datei weitergeben -->
       <script type="text/javascript">
         var javaName = "<?php echo $javaName ?>";
-        var javaAugenfarbe = "<?php echo $javaAugenfarbe ?>";
-        var javaGeburtsmonat = "<?php echo $javaGeburtsmonat ?>";
-        var javaGeburtsort = "<?php echo $javaGeburtsort ?>";
-        var javaGeschlecht = "<?php echo $javaGeschlecht ?>";
-        var javaGeburtsjahr = "<?php echo $javaGeburtsjahr ?>";
-        var javaGeburtstag = "<?php echo $javaGeburtstag ?>";
+        var javaEyeColor = "<?php echo $javaEyeColor ?>";
+        var javaBirthMonth = "<?php echo $javaBirthMonth ?>";
+        var javaBirthPlace = "<?php echo $javaBirthPlace ?>";
+        var javaGender = "<?php echo $javaGender ?>";
+        var javaBirthYear = "<?php echo $javaBirthYear ?>";
+        var javaBirthDay = "<?php echo $javaBirthDay ?>";
       </script>
 
       <img id="logo" src="img/logo_alpha.png"></img>

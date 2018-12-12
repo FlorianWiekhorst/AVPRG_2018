@@ -1,7 +1,7 @@
 var context = new (window.AudioContext || window.webkitAudioContext)();
 var gain = context.createGain();
 var audioBuffers = [];
-var grundBeat;
+var BaseBeat;
 
 for (let i = 0; i < 3; i++) {
    getAudioData(i);
@@ -37,8 +37,8 @@ function getAudioData(i) {
     request.send();
 }
 
-// Der Tag der Geburt bestimmt den grundBeat(1-31):
-function getGrundBeat() {
+// Der Tag der Geburt bestimmt den Grundbeat(1-31):
+function getBaseBeat() {
     var audioBuffer,
         request = new XMLHttpRequest();
         request.open('GET',  "sounds/bg/bg" + (javaGeburtstag) + ".wav", true);
@@ -46,7 +46,7 @@ function getGrundBeat() {
         request.onload = function () {
         var undecodedAudio = request.response;
         context.decodeAudioData(undecodedAudio, function (buffer) {
-            grundBeat = buffer;
+            BaseBeat = buffer;
         });
     };
     request.send();
@@ -93,13 +93,13 @@ function playBackgroundBeat() {
     var tempo = (javaGeburtsmonat)*10, // BPM (beats per minute)
         eighthNoteTime = (60 / tempo) / 2,
         startTime = context.currentTime,
-        grundBeat;
+        BaseBeat;
 
     for (var takt = 0; takt < 2; takt++) {
         var time = startTime + takt * 8 * eighthNoteTime;
 
-        // Spiel den grundBeat und loop selbigen:
-        playBeat(grundBeat, time + 0 * eighthNoteTime);
+        // Spiel den BaseBeat und loop selbigen:
+        playBeat(BaseBeat, time + 0 * eighthNoteTime);
       }
 }
 
