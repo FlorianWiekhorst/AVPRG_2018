@@ -14,12 +14,12 @@
     <!-- Anlegen des UserInputs aus dem Formular der vorherigen Seite -->
       <?php
          $javaName = $_POST["name"];
-         $javaEyeColor = $_POST["augenfarbe"];
-         $javaBirthMonth = $_POST["geburtsmonat"];
-         $javaBirthPlace = $_POST["geburtsort"];
-         $javaGender = $_POST["geschlecht"];
-         $javaBirthYear = $_POST["geburtsjahr"];
-         $javaBirthDay = $_POST["geburtstag"];
+         $javaEyeColor = $_POST["eyeColor"];
+         $javaBirthMonth = $_POST["birthMonth"];
+         $javaBirthPlace = $_POST["birthPlace"];
+         $javaGender = $_POST["gender"];
+         $javaBirthYear = $_POST["birthYear"];
+         $javaBirthDay = $_POST["birthDay"];
 
       ?>
       <!-- UserInput an die JavaScript-Datei weitergeben -->
@@ -79,7 +79,7 @@
             </form>
           </div>
       </div>
-      <script src="js/keyboardTest.js"></script>
+      <!-- <script src="js/keyboardTest.js"></script> -->
       <script src="js/musik.js"></script>
       <script type="text/javascript" src="jquery-3.3.1.js"></script>
     </body>
