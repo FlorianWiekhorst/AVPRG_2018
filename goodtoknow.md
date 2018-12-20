@@ -1,3 +1,29 @@
+ Good Stuff to read:
+
+ + https://devdocs.io/dom/web_audio_api/using_web_audio_api
+  
+ + https://developer.mozilla.org/en-US/docs/Tools/Web_Audio_Editor
+  
+ + https://devdocs.io/dom/web_audio_api/visualizations_with_web_audio_api
+  
+ + https://webaudioapi.com/book/Web_Audio_API_Boris_Smus.pdf
+
+_____________________
+
+Helpful github page "voice-change-o-mat" with visuals:
+https://github.com/mdn/voice-change-o-matic-float-data
+
+Test Live-Demo:
+https://mdn.github.io/voice-change-o-matic/
+
+_____________________
+
+Working Sound Generator with Audio API:
+http://ivanish.ca/diminished-fifth/
+
+_____________________
+ 
+ 
  + https://devdocs.io/vue~2/guide/transitions
 
  + https://codepen.io/DonKarlssonSan/post/fun-with-web-audio-api
@@ -19,7 +45,7 @@
  + https://developer.mozilla.org/en-US/docs/Tools/Web_Audio_Editor
  
 _______________________________________
-Wegen der gestrichelten Lininen wenn man den Lautstärkeregler oder den play-button nutzt:
+Wegen der gestrichelten Lininen(focus) wenn man den Lautstärkeregler oder den play-button nutzt:
  
   in CSS die ID tagen mit :focus - dann outline: none;
   
