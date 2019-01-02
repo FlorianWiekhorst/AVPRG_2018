@@ -34,12 +34,11 @@ for (var i = 0; i < 26; i++) {
 function getAudioData(i) {
     var audioBuffer,
         request = new XMLHttpRequest();
-        // Die Melodien- und Beat-Töne vom Server laden:
-        // Ordner Klavier enthält 13 wav dateien: 1.wav bis 13.wav
+        
         if(i < 13){
           request.open('GET',  "sounds/klavier/" + (i + 1) + ".wav", true);
         }
-        // Nach den 13 Klaviertönen laden wir die 13 Beats für den Grundbeat
+        
         if (i > 12) {
           request.open('GET',  "sounds/kick/k" + (i - 12) + ".wav", true);
         }
@@ -49,7 +48,6 @@ function getAudioData(i) {
         context.decodeAudioData(undecodedAudio, function (buffer) {
             audioBuffers[i] = buffer;
             soundSource = context.createBufferSource();
-            // convolver.buffer = buffer;
         });
     };
     request.send();
@@ -63,7 +61,7 @@ var intendedWidth = document.querySelector('.mainArea').clientWidth;
 var drawVisual;
 
 
-// visualisierung
+// visualizer
 function visualize() {
     WIDTH = canvas.width;
     HEIGHT = canvas.height;
@@ -84,7 +82,7 @@ function visualize() {
 
       for(var i = 0; i < bufferLengthAlt; i++) {
         barHeight = dataArrayAlt[i];
-        //Balkenfarbe im Visualizer nach Gender ändern:
+        //Change bar-Color inside visualizer with Gender:
         if(javaGender == 1){
           canvasCtx.fillStyle = 'rgb(' + (barHeight+120) + ',20,147)';
         }
@@ -103,8 +101,8 @@ function visualize() {
     draw();
 }
 
-// Alter des Benutzers bestimmt Tempo des Sounds:
-// Wie erhalten die Werte von 1918 bis 2017
+// User-Age defines the tempo
+// We get values from 1918 to 2017
   if(javaBirthYear < 1930){tempo = 55;}
   else if (javaBirthYear > 1929 && javaBirthYear < 1949) {tempo = 60;}
   else if (javaBirthYear > 1948 && javaBirthYear < 1959) {tempo = 65;}
@@ -167,9 +165,8 @@ function playBackgroundSound() {
         arr22 = arr11.reverse(), arr23 = arr10.reverse(), arr24 = arr9.reverse(), arr25 = arr8.reverse(), arr26 = arr7.reverse(),
         arr27 = arr6.reverse(), arr28 = arr5.reverse(), arr29 = arr4.reverse(), arr30 = arr3.reverse(), arr31 = arr2.reverse();
 
-// Hier war eig eine clever veschachtelte Function, welche die Arrays der Melodien ausgewählt hat.
-// Aus irgendeinem verfluchten Grund kann JS+WebAudioAPI so eine Verschachtelung nicht schnell genug abrufen.
-// Daher hier der TrashCode:
+// We had an array inside an array, but JS and WebAudioAPI would playback the tones super slow...
+// So here is the larger "trash" solution:
 
     for (var clock = 0; clock < 4; clock++){
       var time = now + clock * 45 * splitter;
@@ -395,18 +392,13 @@ function playBackgroundSound() {
     }
   }
 
-// Buttons
+// Button
 document.getElementById("playMySong").addEventListener("click", function (e) {
         playBackgroundSound();
         visualize();
         $("div.bonus1").delay(1200).fadeIn(600);
         $("div.bedienelemente").fadeOut(300);
  });
-
-// document.getElementById("download_Song").addEventListener("click", function (e) {
-//     // Download Sounds
-//
-// });
 
 // Code for show/hide Bonus Answers after Music is generated:
 function end_of_Bonus1(){
@@ -416,59 +408,47 @@ function end_of_Bonus1(){
 
 function BonusAnswer1_A() {
         end_of_Bonus1();
-				// add audiochanges here - for Math:
         distortion.curve = makeDistortionCurve(Number(2));
         compressor.attack.value = 10;
-        console.log("you hit MATHE");
 }
 
 function BonusAnswer1_B() {
         end_of_Bonus1();
-				// add audiochanges here - for Sport:
         distortion.curve = makeDistortionCurve(Number(1));
         compressor.attack.value = 16;
-        console.log("you hit SPORT");
 }
 
 function BonusAnswer1_C() {
         end_of_Bonus1();
-				// add audiochanges here - for Art:
         distortion.curve = makeDistortionCurve(Number(1));
         compressor.attack.value = 27;
-        console.log("you hit KUNST");
 }
 
 function BonusAnswer1_D() {
         end_of_Bonus1();
-				// add audiochanges here - for German:
         distortion.curve = makeDistortionCurve(Number(2));
         compressor.attack.value = 40;
-        console.log("you hit GERMAN");
 }
 
 function end_of_Bonus(){
   $("div.bonus2").fadeOut(500);
   $("div.answerText").fadeOut(500);
-  // Show End_text and Download Button:
   $("div.download_Area").delay(1200).fadeIn(700);
 }
 
 function BonusAnswer2_A() {
         end_of_Bonus();
         filter.frequency.value = (1660*javaBirthMonth);
-        console.log("you hit DOG");
 }
 
 function BonusAnswer2_B() {
         end_of_Bonus();
         filter.frequency.value = 8705;
-        console.log("you hit CAT");
 }
 
 function BonusAnswer2_C() {
         end_of_Bonus();
         filter.frequency.value = 20000;
-        console.log("you hit horse");
 }
 
 function BonusAnswer2_D() {
