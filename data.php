@@ -3,12 +3,12 @@
     <head>
       <meta charset="utf-8">
       <title>Datenklang</title>
-  		<meta name="description" content="Datenklang AVPRG 2018" />
-  		<meta name="author" content="Flony" />
+  	  <meta name="description" content="Datenklang AVPRG 2018" />
+  	  <meta name="author" content="Florian and Tony" />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  		<link rel="stylesheet" type="text/css" href="css/data.css" />
+  	  <link rel="stylesheet" type="text/css" href="css/data.css" />
     </head>
     <body>
     <!-- Anlegen des UserInputs aus dem Formular der vorherigen Seite -->
@@ -71,8 +71,6 @@
               <form action="https://www.weakhost.de/">
                   <input type="submit" class="back2Start" id="back2Start" value="Zurück zum Start!" />
               </form>
-
-              <!-- <button id="download_Song"></button> -->
             </div>
           </div>
       </div>
