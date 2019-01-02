@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <title>Datenklang</title>
   		<meta name="description" content="Datenklang AVPRG 2018" />
-  		<meta name="author" content="Flony" />
+  		<meta name="author" content="Florian und Tony" />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,30 +38,30 @@
             <div class="form-group">
               <label></label>
               <div class="input-group">
-                <input id="vorname_text" name="name" value="Peter" placeholder="Vorname" type="text" class="form-control here" required="required">
+                <input id="vorname_text" name="name" placeholder="Vorname" type="text" class="form-control here" required="required">
               </div>
             </div>
             <div class="form-group">
               <label></label>
               <div class="input-group">
-                <input id="birthPlace_text" name="birthPlace" value="Berlin" placeholder="Geburtsort" type="text" class="form-control here" required="required">
+                <input id="birthPlace_text" name="birthPlace" placeholder="Geburtsort" type="text" class="form-control here" required="required">
               </div>
             </div>
             <div class="form-group">
-              <label>Ich sehe mich als...</label>
+              <label>Ich bin...</label>
               <div>
                 <label class="custom-control custom-radio">
-                  <input name="gender" type="radio" class="custom-control-input" value="12" required="required">
+                  <input name="gender" type="radio" class="custom-control-input" value="1" required="required">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">eine Lady</span>
                 </label>
                 <label class="custom-control custom-radio">
-                  <input name="gender" type="radio" class="custom-control-input" value="23" required="required">
+                  <input name="gender" type="radio" class="custom-control-input" value="2" required="required">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">ein Gentlemen</span>
                 </label>
                 <label class="custom-control custom-radio">
-                  <input name="gender" type="radio" class="custom-control-input" value="34" required="required">
+                  <input name="gender" type="radio" class="custom-control-input" value="3" required="required">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">Beides / Nix</span>
                 </label>
@@ -97,7 +97,7 @@
                 </label>
               </div>
             </div>
-            <div class="dreier_bday_box">
+            <div class="the_bday_box">
             <div class="form-group">
               <label for="birthYear_select">Geburtsjahr</label>
               <div>
@@ -139,17 +139,6 @@
                       }
                   ?>
                 </select>
-                  <?php
-                    if(checkdate($birthMonth, $birthDay, $birthYear)){
-                        ?>
-                        <script type='text/javascript'>
-                          $(document).ready(function(){
-                            document.getElementById("sub_button").style.display = "inline-block";
-                          });
-                          </script>
-                          <?php
-                          }
-                    ?>
               </div>
             </div>
           </div>

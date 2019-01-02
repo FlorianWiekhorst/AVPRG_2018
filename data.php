@@ -36,50 +36,46 @@
       <img id="logo" src="img/logo_alpha.png"></img>
 
       <div class="mainArea">
-          <div class="visualisierungsBox">
-               <!-- visualisierungsCode hier -->
-               <!-- visualisierungsCode hier -->
-               <!-- visualisierungsCode hier -->
-          </div>
+          <canvas class="visualisierungsBox" id="visu"></canvas>
 
           <div class="bedienelemente">
-                <button id="spielmeinsound"></button>
-                <input type="range" min="0" max="100" value="10" class="slider" id="gainSlider">
+            <button id="playMySong"></button>
           </div>
 
-          <div class="zusatzfragen">
-            <div id="anwortstext">
-              Individualisiere deinen Song jetzt live noch weiter, <?php echo $_POST["name"];?>,<br>
-              indem du ein paar Fragen beantwortest.
-            </div>
-            <form action="" method="post" class="radio_zusatzfragen">
-              <label>Meinen Urlaub verbringe ich am Liebsten:</label> <!-- hier die vers. Fragen per echo einbinden! -->
-              <div>
-                <label class="custom-control custom-radio">
-                  <input name="zusatzfragen_1" type="radio" class="custom-control-input" value="a" required="required">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Ruhig am Pool.</span>
-                </label>
-                <label class="custom-control custom-radio">
-                  <input name="zusatzfragen_1" type="radio" class="custom-control-input" value="b" required="required">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">auf der Couch vorm TV.</span>
-                </label>
-                <label class="custom-control custom-radio">
-                  <input name="zusatzfragen_1" type="radio" class="custom-control-input" value="c" required="required">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Halbnackt im Wald.</span>
-                </label>
-                <label class="custom-control custom-radio">
-                  <input name="zusatzfragen_1" type="radio" class="custom-control-input" value="d" required="required">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Urlaub?</span>
-                </label>
+          <div class="bonusQuestions">
+            <div id="bonus_question_1" class="bonus1">
+              <div id="answerText" class="answerText">
+                Individualisiere deinen Song noch weiter, <?php echo $_POST["name"];?>!
               </div>
-            </form>
+              <span>Dein Lieblingsfach in der Grundschule war:</span>
+              <ul>
+                <li onclick="BonusAnswer1_A();" id="Bonus1_math"><label>Mathe</label></li>
+                <li onclick="BonusAnswer1_B();" id="Bonus1_sport"><label>Sport</label></li>
+                <li onclick="BonusAnswer1_C();" id="Bonus1_art"><label>Kunst</label></li>
+                <li onclick="BonusAnswer1_D();" id="Bonus1_german"><label>Deutsch</label></li>
+              </ul>
+            </div>
+            <div id="bonus_question_2" class="bonus2">
+              <span>Das besten Haustiere sind natürlich:</span>
+              <ul>
+                <li onclick="BonusAnswer2_A();" id="Bonus2_dog"><label>Hunde</label></li>
+                <li onclick="BonusAnswer2_B();" id="Bonus2_cat"><label>Katzen</label></li>
+                <li onclick="BonusAnswer2_C();" id="Bonus2_horse"><label>Pferde</label></li>
+                <li onclick="BonusAnswer2_D();" id="Bonus2_fish"><label>Fische</label></li>
+              </ul>
+            </div>
+            <div id="download_Area" style="display:none;" class="download_Area">
+              <span id="end_text">Danke für deine Teilnahme.</span><br>
+              <span>Was du hörst, ist DEIN persönlicher Sound!</span><br>
+
+              <form action="https://www.weakhost.de/">
+                  <input type="submit" class="back2Start" id="back2Start" value="Zurück zum Start!" />
+              </form>
+
+              <!-- <button id="download_Song"></button> -->
+            </div>
           </div>
       </div>
-      <!-- <script src="js/keyboardTest.js"></script> -->
       <script src="js/musik.js"></script>
       <script type="text/javascript" src="jquery-3.3.1.js"></script>
     </body>
