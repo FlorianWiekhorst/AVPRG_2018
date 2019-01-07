@@ -56,7 +56,7 @@
               </ul>
             </div>
             <div id="bonus_question_2" class="bonus2">
-              <span>Das besten Haustiere sind natürlich:</span>
+              <span>Die besten Haustiere sind natürlich:</span>
               <ul>
                 <li onclick="BonusAnswer2_A();" id="Bonus2_dog"><label>Hunde</label></li>
                 <li onclick="BonusAnswer2_B();" id="Bonus2_cat"><label>Katzen</label></li>
