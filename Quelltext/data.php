@@ -36,9 +36,9 @@
       <img id="logo" src="img/logo_alpha.png"></img>
 
       <div class="mainArea">
-          <canvas class="visualisierungsBox" id="visu"></canvas>
+          <canvas class="visualization_Box" id="visu"></canvas>
 
-          <div class="bedienelemente">
+          <div class="control_Area">
             <button id="playMySong"></button>
           </div>
 
@@ -64,15 +64,14 @@
                 <li onclick="BonusAnswer2_D();" id="Bonus2_fish"><label>Fische</label></li>
               </ul>
             </div>
-            <div id="download_Area" style="display:none;" class="download_Area">
+            <div id="end_Area" style="display:none;" class="end_Area">
               <span id="end_text">Danke für deine Teilnahme.</span><br>
-              <span>Was du hörst, ist DEIN persönlicher Sound!</span><br>
-
+              <span>Was du hörst, ist DEIN persönlicher Sound!</span><br><br>
+              <span>Du kannst ihn hier direkt herunterladen:</span>
+              <a href="__Link__vom_LIED_aufm_Server__.mp3" download="MeinDatenklang.mp3">Download MP3</a>
               <form action="https://www.weakhost.de/">
                   <input type="submit" class="back2Start" id="back2Start" value="Zurück zum Start!" />
               </form>
-
-              <!-- <button id="download_Song"></button> -->
             </div>
           </div>
       </div>
